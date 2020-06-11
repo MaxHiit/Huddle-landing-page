@@ -1,0 +1,96 @@
+@import 'variables';
+
+.hero-bg{
+    background: $paleCyanColor;
+    background-image: url(/images/bg-hero-desktop.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header{
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 0;
+
+    @include screen-for-phone{
+        padding: 2em 0 1em 0;
+    }
+    
+    .header-logo{
+        width: 200px;
+        
+        @include screen-for-phone{
+            width: 100px;
+        }
+    }
+    .header-button{
+        padding: 1em 3em;
+        border-radius: 10em;
+        background: $paleCyanColor;
+        font-weight: 700;
+        cursor: pointer;
+        box-shadow: 0 0 10px $grayishBlueColor;
+
+        @include screen-for-phone{
+            padding: .5em 1.5em;
+        }
+    }
+}
+
+.hero{
+    min-height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include screen-for-phone{
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero__content{
+        max-width: 515px;
+        
+        h2{
+            font-family: $headingFont;
+            font-size: $fontSize + 25px;
+
+            @include screen-for-phone{
+                font-size: $fontSize + 7px;
+            }
+        }
+
+        p{
+            padding: 2em 0;
+            font-weight: 400;
+            line-height: 1.2;
+
+            @include screen-for-phone{
+                font-size: 15px;
+                padding: 1.5em 0;
+            }
+        }
+
+        .hero__content--button{
+            padding: 1.5em 5em;
+            background: $pinkColor;
+            border-radius: 10em;
+            cursor: pointer;
+            
+            a{
+                font-weight: 700;
+                color: #fff;
+            }
+        }
+    }
+    .hero__image{
+        width: 50%;
+        @include screen-for-phone{
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+// variables
+// color variables //
+$pinkColor: hsl(322, 100%, 66%);
+$paleCyanColor: hsl(193, 100%, 96%);
+$darkCyanColor: hsl(192, 100%, 9%);
+$grayishBlueColor: hsl(208, 11%, 55%);
+
+
+$fontSize: 18px;
+
+// font-family for the headings
+$headingFont: 'Poppins', sans-serif;
+// gont family for body and CTA
+$bodyFont: 'Open Sans', sans-serif;
+
+// Breakpoints
+$max-phone: 414px;
+
+// mixin
+@mixin screen-for-phone{
+    @media screen and (max-width: $max-phone){
+        @content;
+    }
+}

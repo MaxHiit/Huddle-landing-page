@@ -1,0 +1,143 @@
+@import 'variables';
+
+footer {
+    min-height: 30vh;
+    background: $darkCyanColor;
+    font-size: 15px;
+    color: #fff;
+    position: relative;
+
+    .float-container {
+        height: 200px;
+        min-width: 300px;
+        background: #fff;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: -50%;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0 0 8px rgba($color: $grayishBlueColor, $alpha: 0.3);
+        border-radius: 20px;
+
+        @include screen-for-phone {
+            width: 300px;
+            height: 150px;
+            top: -10%;
+        }
+
+        h2 {
+            color: $darkCyanColor;
+            padding-bottom: 1em;
+
+            @include screen-for-phone {
+                font-size: 15px;
+            }
+        }
+
+        &--button {
+            padding: 1.5em 4em;
+            border-radius: 10em;
+            background: $pinkColor;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 0 10px $grayishBlueColor;
+
+            @include screen-for-phone {
+                padding: 1em 2em;
+            }
+
+            a {
+                color: #fff;
+            }
+        }
+    }
+
+    .flex--rows {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 7em 0 4em 0;
+        flex-wrap: wrap;
+    }
+
+    .footer-container--left,
+    .footer-container--center,
+    .footer-container--right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        @include screen-for-phone {
+            flex: 1 1 40em;
+            padding: .5em 0;
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+                padding: .5em 0;
+            }
+
+            a {
+                color: #fff;
+            }
+        }
+    }
+
+    .footer-container--social {
+        @include screen-for-phone {
+            flex: 1 1 40em;
+            text-align: center;
+            padding-top: .5em;
+        }
+
+        ion-icon {
+            font-size: 20px;
+
+            &+ion-icon {
+                padding-left: 2em;
+            }
+        }
+    }
+
+    .footer-container--left {
+        width: 400px;
+
+        .footer__logo {
+            max-width: 200px;
+
+            svg {
+                path {
+                    fill: #fff;
+                }
+            }
+        }
+
+        .footer__location,
+        .footer__phone,
+        .footer__email {
+            display: flex;
+            padding: .5em 0;
+
+            p {
+                font-size: 14px;
+            }
+
+            ion-icon {
+                font-size: 20px;
+                padding-right: 1em;
+
+                &[name=pin-outline] {
+                    padding-right: .4em;
+                    font-size: 50px;
+                }
+            }
+        }
+    }
+}
